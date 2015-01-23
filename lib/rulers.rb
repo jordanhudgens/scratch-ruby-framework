@@ -8,6 +8,10 @@ module Rulers
         return [404, {'Content-Type' => 'text/html'}, []]
       end
 
+      if env['PATH_INFO'] == '/'
+        return [301, {'Content-Type' => 'text/html'}, ["This is the homepage"]]
+      end
+
       klass, act = get_controller_and_action(env)
       controller = klass.new(env)
       begin
