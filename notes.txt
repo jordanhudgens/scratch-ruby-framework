@@ -1,8 +1,9 @@
 To build gem:
+	git add .
 	gem build rulers.gemspec
 
-To install updated version:
-	gem install rulers-0.0.1.gem
+To install updated version (make sure you build with the correct version number):
+	gem install rulers-0.0.2.gem
 
 To run server:
 	rackup -p 3001
